@@ -1,0 +1,300 @@
+Hannah
+ female
+Bathsheda
+ female
+Ludo
+ male
+Bathilda
+ female
+Katie
+ female
+Cuthbe
+ male
+Phineas
+ male
+Regulus
+ male
+Sirius
+ male
+Amelia
+ female
+Susan
+ male
+Terry
+ female
+Lavender
+ male
+Millicent
+ female
+Charity
+ female
+Frank
+ male
+Alecto
+ male
+Amycus
+ male
+Reginald
+ male
+Mary
+ female
+Cho
+ male
+Penelope
+ female
+Michael
+ male
+Vincent
+ male
+Vincent
+ male
+Colin
+ male
+Dennis
+ male
+Dirk
+ male
+Ted
+ male
+Bartemius
+ male
+Voldemort
+ male
+Fleur
+ male
+Gabrielle
+ female
+Dedalus
+ male
+Amos
+ male
+Cedric
+ male
+Antonin
+ male
+Aberforth
+ male
+Albus
+ male
+Tom
+ male
+Ariana
+ female
+Dudley
+ male
+Marjorie
+ female
+Petunia
+ female
+Vernon
+ male
+Marietta
+ female
+Everard
+ male
+Arabella
+ female
+Justin
+ male
+Seamus
+ male
+Marcus
+ male
+Nicolas
+ male
+Mundungus
+ male
+Cornelius
+ male
+Filius
+ male
+Marvolo
+ male
+Merope
+ male
+Morfin
+ male
+Anthony
+ male
+Go
+ male
+Gregory
+ male
+Hermione
+ female
+Fenrir
+ male
+Gellert
+ male
+Wilhelmina
+ female
+Godric Gryf
+ male
+Rubeus
+ male
+Rolanda
+ female
+Mafalda
+ female
+Helga
+ female
+Angelina
+ female
+Lee
+ female
+Igor
+ male
+Viktor
+ male
+Bellatrix
+ male
+Rabastan
+ male
+Rodolphus
+ male
+Gilderoy
+ male
+Alice
+ female
+Augusta
+ female
+Frank
+ male
+Neville
+ female
+Luna
+ female
+Remus
+ male
+Walden
+ male
+Draco
+ male
+Lucius
+ male
+Narcissa
+ female
+Mada
+ female
+Olympe
+ female
+Ernie
+ female
+Minerva
+ female
+Alastor
+ male
+Garrick
+ male
+Pansy
+ female
+Padma
+ female
+Parvati
+ female
+Peter
+ male
+Antioch
+ male
+Cadmus
+ male
+Ignotus
+ male
+Sturgis
+ male
+Harry
+ female
+James
+ male
+Lily
+ female
+Quirinus
+ male
+Rowena
+ female
+Mary Riddle
+ female
+Thomas
+ male
+Tom
+ male
+Demelza
+ female
+Augustus
+ male
+Albert
+ male
+Scabior
+ male
+Newt
+ male
+Rufus
+ male
+Kingsley
+ male
+Stan
+ male
+Aurora
+ female
+Rita
+ female
+Horace
+ male
+Salazar
+ male
+Hepzibah
+ male
+Zacharias
+ male
+Severus
+ male
+Alicia
+ female
+Pomona
+ female
+Pius
+ male
+Dean
+ male
+Nymphadora
+ female
+Ted
+ male
+Travers
+ male
+Sybill
+ female
+Dolores
+ male
+Romilda
+ female
+Septi
+ female
+Voldemort
+ male
+Arthur
+ male
+Bill
+ male
+Charlie
+ female
+Fred
+ male
+George
+ female
+Ginny
+ female
+Molly
+ female
+Percy
+ male
+Ron
+ male
+Oliver
+ male
+Kennilworthy
+ male
+Yaxley
+ female
+Blaise Zabini
+ female
