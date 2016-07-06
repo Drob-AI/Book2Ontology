@@ -2,6 +2,8 @@ import nltk
 import genderRec
 import dataReader
 import dataOperations
+import json
+
 
 # nltk.download()
 # sentence = "At eight o'clock on Thursday morning"
@@ -13,4 +15,8 @@ import dataOperations
 # clf = genderRec.clf
 # genderRec.train_name_classifier(clf)
 # print(genderRec.test_classifier(clf))
-print()
+print(dataOperations.person_list)
+print(dataOperations.organizations)
+
+
+
