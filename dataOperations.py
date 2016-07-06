@@ -21,7 +21,7 @@ for sentt in sentts:
             for part in person:
                 name += part + ' '
             if name[:-1] not in person_list:
-                person_list.append(name[:-1])
+                person_list.append(name[:-1].replace('Mr.', '').replace('Miss', '').strip())
             name = ''
         person = []
 

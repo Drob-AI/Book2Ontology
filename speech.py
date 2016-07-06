@@ -1,4 +1,5 @@
 from dataReader import read_hary_potter
+from dataOperations import person_list
 
 def split_protospeech(proto_speech):
     speech_tokens = proto_speech.split('"')
@@ -16,30 +17,28 @@ def read_speech(data):
         speeches.append(split_protospeech(speech))
     return speeches
 
-def get_speech_names(name_speech, names):
+def get_speech_name(name_speech, names):
     words = name_speech.split(' ')
-    return set(words).intersection(set(names))
+    for name in names:
+        name_parts = set(name.split(' '));
+        intersection = set(words).intersection(set(name_parts))
+        if (len(intersection) > 0) :
+            return name
+    return None
 
 
 def name_speech(data, names):
     speeches = read_speech(data)
     named_speeches = []
     for speech in speeches:
-        speech_names = []
+        name = None
         for token in speech:
-            if len(speech_names) > 0:
+            if name:
                 break
             if (not token["isChar"]):
-                speech_names = list(get_speech_names(token["txt"], names))
-        name = None
-        if len(speech_names) > 0:
-            name = speech_names[0]
+                name = get_speech_name(token["txt"], names)
         named_speeches.append({ "speeker": name, "speech_tokens": speech})
     return named_speeches
 
-
-# read_speech(read_hary_potter());
-names = ["Harry", "Ron", "Hagrid"]
-
-for a in name_speech(read_hary_potter(), names):
+for a in name_speech(read_hary_potter(), person_list):
     print a
