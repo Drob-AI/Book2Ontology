@@ -60,4 +60,4 @@ def characterToCharacterSentiment():
                             sentiment_anal[x][foundCharacter] = cur_score
     return sentiment_anal
 
-print(characterToCharacterSentiment())
+#print(characterToCharacterSentiment())
