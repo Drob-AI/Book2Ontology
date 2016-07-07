@@ -121,8 +121,8 @@ def translate_name_in_array(name):
     name_size(features, name)
     number_of_vowels(features, name)
 
-    features[-2] = ord(name[-1])-ord('a')
-    features[-1] = ord(name[-2])-ord('a')
+    # features[-2] = ord(name[-1])-ord('a')
+    # features[-1] = ord(name[-2])-ord('a')
 
     return np.array(features)
 

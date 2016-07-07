@@ -62,7 +62,6 @@ def translate_to_classname(class_val):
 
 
 def train_name_classifier(clf, female_names_file=cur_dir + '/femaleTrain.txt', male_names_file=cur_dir + '/maleTrain.txt'):
-    print(cur_dir)
     with open(female_names_file) as data_female:
         data_female = data_female.readlines()
     with open(male_names_file) as data_male:
@@ -95,6 +94,9 @@ def test_with_hary_potter_names(clf):
 
             line = name + ' ' + gender + '\n'
             classified.write(line)
+
+def translate_byte_to_name(byte):
+    return "Male" if (byte == 1) else "Female"
 
 # dataAPI.generate_train_and_test_files()
 # 0.786247086247
