@@ -51,5 +51,13 @@ def characterToCharacterSentiment():
                 for charName in dataOperations.person_list:
                     if sentence.find(charName) != -1:
                         foundCharacter = charName
-                        sentiment_anal[x][foundCharacter] = calculateSentiment(sentence)
+                        cur_score = calculateSentiment(sentence)
+                        if foundCharacter in sentiment_anal[x]:
+                            # cur_score == [[pos, neg]]
+                            sentiment_anal[x][foundCharacter][0][0] += cur_score[0][0]
+                            sentiment_anal[x][foundCharacter][0][1] += cur_score[0][1]
+                        else:
+                            sentiment_anal[x][foundCharacter] = cur_score
     return sentiment_anal
+
+print(characterToCharacterSentiment())

@@ -123,4 +123,4 @@ def summarize_page(url):
 def summarize_text(text, block_sep='\n\n', url=None, title=None):
     return Summary(url, None, title, summarize_blocks(text.split(block_sep)))
 
-print(summarize_text(character_speech["Harry Potter"]))
+print(summarize_text(character_speech["Harry Potter"], '. . .'))
