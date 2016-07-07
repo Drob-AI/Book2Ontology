@@ -23,16 +23,27 @@ translated_genders = [genderRec.translate_byte_to_name(byte_name) for byte_name 
 person_list_with_names = zip(dataOperations.person_list, translated_genders)
 
 connected = {}
+histogram = {}
 for i,sentence in enumerate(dataOperations.hary_potter_post_tagged):
     first_nnp = []
     for word in sentence:
-        if word[1] == 'NNP':
 
+        for nnp in first_nnp:
+            if histogram.get(nnp) == None:
+                histogram[nnp] = {}
+
+            if histogram[nnp].get(word[0]) == None:
+                histogram[nnp][word[0]] = 1
+            else:
+                histogram[nnp][word[0]] += 1
+
+        if word[1] == 'NNP':
             for con_key in first_nnp:
                 if(connected.get(con_key) == None):
                     connected[con_key] = []
 
                 connected[con_key].append(word[0])
+
 
             first_nnp.append(word[0])
 
@@ -44,3 +55,6 @@ for key in connected.keys():
         del connected[key]
     else:
         connected[key] = list(set(connected[key]))
+
+# print(histogram["Snape"])
+# histogram and top not stop words used as connected words
