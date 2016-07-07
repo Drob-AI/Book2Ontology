@@ -7,8 +7,10 @@ sys.setdefaultencoding("utf-8")
 import json
 
 person_list = []
+
 with open('person_list.json') as data_file:
     person_list = json.load(data_file)
+    person_list = [x.replace('Mr.', '').replace('Miss', '').strip() for x in person_list]
 
 organizations = []
 with open('organizations.json') as data_file:
@@ -59,3 +61,4 @@ hary_potter_post_tagged = [nltk.pos_tag(tokens) for tokens in hary_potter_words]
 
 # with open('chuncks.json', 'w') as outfile:
 #     json.dump(sentts, outfile)
+
