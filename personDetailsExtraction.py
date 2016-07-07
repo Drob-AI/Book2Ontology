@@ -21,3 +21,26 @@ translated_names = [genderRec.translators.translate_name_in_array(name.split(' '
 translated_genders = [genderRec.translate_byte_to_name(byte_name) for byte_name in clf.predict(translated_names)]
 
 person_list_with_names = zip(dataOperations.person_list, translated_genders)
+
+connected = {}
+for i,sentence in enumerate(dataOperations.hary_potter_post_tagged):
+    first_nnp = []
+    for word in sentence:
+        if word[1] == 'NNP':
+
+            for con_key in first_nnp:
+                if(connected.get(con_key) == None):
+                    connected[con_key] = []
+
+                connected[con_key].append(word[0])
+
+            first_nnp.append(word[0])
+
+
+
+names = [single_name for n in dataOperations.person_list for single_name in n.split(' ')]
+for key in connected.keys():
+    if key not in names:
+        del connected[key]
+    else:
+        connected[key] = list(set(connected[key]))

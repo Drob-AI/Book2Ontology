@@ -14,6 +14,10 @@ organizations = []
 with open('organizations.json') as data_file:
     organizations = json.load(data_file)
 
+sentts = []
+with open('chuncks.json') as data_file:
+    sentts = json.load(data_file)
+
 hary_potter_sent = dataReader.read_hary_potter()
 hary_potter_words = [nltk.word_tokenize(row) for row in hary_potter_sent]
 hary_potter_post_tagged = [nltk.pos_tag(tokens) for tokens in hary_potter_words]
@@ -52,3 +56,6 @@ hary_potter_post_tagged = [nltk.pos_tag(tokens) for tokens in hary_potter_words]
 
 # with open('organizations.json', 'w') as outfile:
 #     json.dump(organizations, outfile)
+
+# with open('chuncks.json', 'w') as outfile:
+#     json.dump(sentts, outfile)
