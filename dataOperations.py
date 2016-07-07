@@ -10,7 +10,7 @@ person_list = []
 
 with open('person_list.json') as data_file:
     person_list = json.load(data_file)
-    person_list = [x.replace('Mr.', '').replace('Miss', '') for x in person_list]
+    person_list = [x.replace('Mr.', '').replace('Miss', '').strip() for x in person_list]
 
 organizations = []
 with open('organizations.json') as data_file:

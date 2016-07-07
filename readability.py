@@ -8,6 +8,7 @@ from utils import get_words
 from utils import get_sentences
 from utils import count_syllables
 from utils import count_complex_words
+from speech import *
 
 
 class Readability:
@@ -96,6 +97,22 @@ if __name__ == "__main__":
     data = dataOperations.hary_potter_sent
     text = reduce(lambda a,b: a + b, data)
 
+    for x in dataOperations.person_list:
+        if len(character_speech[x]) > 3: 
+            print x
+            rd = Readability(character_speech[x])
+            print 'ARI: ', rd.ARI()
+            print 'FleschReadingEase: ', rd.FleschReadingEase()
+            print 'FleschKincaidGradeLevel: ', rd.FleschKincaidGradeLevel()
+            print 'GunningFogIndex: ', rd.GunningFogIndex()
+            print 'SMOGIndex: ', rd.SMOGIndex()
+            print 'ColemanLiauIndex: ', rd.ColemanLiauIndex()
+            print 'LIX: ', rd.LIX()
+            print 'RIX: ', rd.RIX() 
+            print "\n"
+            print "\n"
+
+    print "Whole text"
     rd = Readability(text)
     print 'ARI: ', rd.ARI()
     print 'FleschReadingEase: ', rd.FleschReadingEase()
