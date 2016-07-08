@@ -134,8 +134,9 @@ def countEventsInBook(pos_tagged, threshold):
             if len(lem_synsets) > 0:
                 lem_synset = lem_synsets[0]
                 event_sim[lem] = wn.path_similarity(lem_synset, event_synset)
-    return filter(lambda i: i[1] >= threshold, event_sim)
+    #print(event_sim)
+    return filter(lambda i: i[1] >= threshold, event_sim.items())
 
-#he = countEventsInBook(hary_potter_post_tagged, 0.2)
-#he_sorted = sorted(he.items(), key=lambda i: i[1], reverse=True)
+#he_list = countEventsInBook(hary_potter_post_tagged, 0.2)
+#he_sorted = sorted(he_list, key=lambda i: i[1], reverse=True)
 #print(he_sorted)
