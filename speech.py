@@ -57,6 +57,10 @@ def per_character_speech(data, names):
         if speech['speeker']:
             spokes = [x["txt"] for x in speech['speech_tokens'] if x["isChar"]]
             spokie = reduce(lambda a,b: a + ' ' + b, spokes)
+
+            # print speech['speeker']
+            # print spokie
+
             character_speech[speech['speeker']] = character_speech[speech['speeker']] + '.' + spokie
     return character_speech
 

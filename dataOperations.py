@@ -10,16 +10,20 @@ person_list = []
 
 with open('person_list.json') as data_file:
     person_list = json.load(data_file)
-    person_list = [x.replace('Mr.', '').replace('Miss', '') for x in person_list]
+    person_list = [x.replace('Mr.', '').replace('Miss', '').strip() for x in person_list]
 
 organizations = []
 with open('organizations.json') as data_file:
     organizations = json.load(data_file)
 
+sentts = []
+with open('chuncks.json') as data_file:
+    sentts = json.load(data_file)
+
 hary_potter_sent = dataReader.read_hary_potter()
 hary_potter_words = [nltk.word_tokenize(row) for row in hary_potter_sent]
 hary_potter_post_tagged = [nltk.pos_tag(tokens) for tokens in hary_potter_words]
-# sentts = [nltk.ne_chunk(pos_taged, binary = False) for pos_taged in hary_potter_post_tagged]
+hary_potter_ne_and_pos_tagged = [nltk.ne_chunk(pos_taged, binary = False) for pos_taged in hary_potter_post_tagged]
 # person_list = []
 # person = []
 # org = []
@@ -54,3 +58,7 @@ hary_potter_post_tagged = [nltk.pos_tag(tokens) for tokens in hary_potter_words]
 
 # with open('organizations.json', 'w') as outfile:
 #     json.dump(organizations, outfile)
+
+# with open('chuncks.json', 'w') as outfile:
+#     json.dump(sentts, outfile)
+
